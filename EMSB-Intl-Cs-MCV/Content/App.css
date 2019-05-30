@@ -1,0 +1,437 @@
+﻿*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 75%;
+}
+
+.emsb-calendar-title-crumb {
+    display: none;
+}
+
+
+
+@media (min-width: 576px) {
+    html {
+        /* font-size: 50%; */
+        font-size: 75%;
+    }
+
+    .emsb-calendar-title-crumb {
+        display: inline;
+    }
+
+    .emsb-calendar-btn-right {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        /* font-size: 56.25%; */
+        font-size: 100%;
+    }
+
+    .emsb-calendar-title-crumb {
+        display: none;
+    }
+
+    .emsb-calendar-btn-right {
+        margin-left: -1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 100%;
+    }
+
+    .emsb-calendar-title-crumb {
+        display: inline;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+
+    .emsb-calendar-title-crumb {
+        display: inline;
+    }
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    min-height: 100%;
+}
+
+.nav-link, .footer-links, .admin-table-header {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.lato-font {
+    font-family: 'Lato', sans-serif;
+}
+
+.jumbotron {
+    /* //padding: 0; */
+    margin: 0 auto;
+    background: #f0f7fd;
+    color: #118af4;
+}
+
+.homeCarousel {
+    background: #f0f7fd;
+}
+
+.bold-font {
+    font-weight: 700;
+}
+
+.blue-font {
+    color: #2e86de;
+}
+
+.purple-font {
+    color: #5f27cd
+}
+
+.pink-font {
+    color: #ff6b6b
+}
+
+.red-font {
+    color: #ee5253;
+}
+
+.green-font {
+    color: #10ac84;
+}
+
+.orange-font {
+    color: #ff9f43;
+}
+
+.dark-blue-font {
+    color: #1b1464;
+}
+
+.dark-grey-font {
+    color: #222f3e;
+}
+
+.light-grey-font {
+    color: #8395a7;
+}
+
+.home-banner-icon {
+    width: 3.5rem;
+    height: auto;
+}
+
+.footer {
+    background-color: #f0f7fd;
+    margin: 2rem 0 0 0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/*footer-links {
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+}*/
+
+.emsb-footer-logo {
+    width: 3rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.emsb-calendar-icon {
+    width: 3.5rem;
+    height: auto;
+}
+
+
+
+
+.admission-checkmark {
+    width: 2rem;
+    height: auto;
+}
+
+.admission-form-icon, .admission-link-icon {
+    width: 2rem;
+    height: auto;
+}
+
+.admission-qc-edu-nf {
+    width: 4rem;
+    height: auto;
+}
+
+.admission-steps-icon {
+    width: 2.4rem;
+    height: auto;
+}
+
+.admission-qc-edu-title,
+.admission-text,
+.emsb-calendar-text,
+.admission-steps-text,
+.student-categories-text,
+.student-links-text {
+    color: #222f3e;
+}
+
+.admission-qc-edu-title {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-top: 1.1rem;
+}
+
+    .admission-qc-edu-title:hover,
+    .admission-text:hover,
+    .emsb-calendar-text:hover,
+    .admission-steps-text:hover,
+    .student-categories-text:hover
+    .student-link-text:hover {
+        color: #2e86de;
+    }
+
+.admission-qc-edu-title-german {
+    font-size: 1rem;
+    margin-top: 1.45rem;
+}
+
+.admission-qc-edu-title-spanish {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+}
+
+.admission-text {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* STUDENT pages */
+.students-tag-icon {
+    width: 2.6rem;
+    height: auto;
+}
+
+.students-list-icon {
+    width: 4rem;
+    height: auto;
+}
+
+.students-card-heading {
+    color: rgb(238, 243, 249);
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.student-study-health-heading {
+    color: rgb(238, 243, 249);
+    font-size: 1.6rem;
+    margin-top: .3rem;
+    margin-bottom: 0;
+}
+
+.students-title-icon-small {
+    width: 5.2rem;
+    height: auto;
+}
+
+.students-field-trip-icon {
+    width: 5rem;
+    height: auto;
+}
+
+.students-field-trip-location {
+    font-size: 1.1rem;
+    color: #c8d6e5;
+}
+
+.students-field-trip-date {
+    font-size: 2.2rem;
+}
+
+.students-field-trip-small-title {
+    font-size: 3rem;
+}
+
+.fa-info-circle, .fa-map-marked-alt, .fa-external-link-alt {
+    color: white;
+}
+
+.contact-icon-group {
+    margin: 1.8rem 0 0 0;
+}
+
+.contact-icon {
+    color: #2e86de;
+    margin: 0 .4rem 0 .4rem;
+}
+
+.contact-staff-name {
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 1.1rem 0 0 .8rem;
+}
+
+ul, .ul-school-mission-list {
+    list-style-type: none;
+}
+
+.breadcrumb {
+    background-color: white;
+    margin: 0 auto 0 auto;
+    /* padding: 0; */
+    padding-top: 0;
+}
+
+.school-philo-list-icon {
+    color: #2e86de;
+}
+
+.admin-content {
+    margin: 0;
+    padding: 0;
+}
+
+.admin-left {
+    height: 100vh;
+    width: 7rem;
+    background-color: #c8d6e5;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.admin-left-button {
+    width: 5rem;
+    padding: 0 !important;
+    margin: 1rem auto;
+}
+
+.admin-big-logo {
+    width: 4rem;
+    height: auto;
+}
+
+.admin-right {
+    height: 100vh;
+    width: 92vw;
+}
+
+.admin-right-title {
+    margin: 1.9rem 2rem 1.6rem 2rem;
+}
+
+.admin-search-bar {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 15rem;
+}
+
+.admin-search-btn {
+    margin-top: -4.5rem;
+    margin-left: 12rem;
+}
+
+.admin-search-icon {
+    color: #c8d6e5;
+}
+
+.admin-new-btn {
+    margin: 2.1rem 1rem 0 0;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.admin-new-icon {
+    color: #f3e3e0;
+}
+
+.admin-right-tags {
+    margin-left: 1.2rem;
+}
+
+.admin-tag-btn {
+    padding: 0 1rem;
+    color: black;
+}
+
+.admin-tag-text,
+.admin-tag-text-active {
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #8395a7;
+}
+
+.admin-tag-text-active {
+    color: #1b1464;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.admin-right-table {
+    margin-left: 0.7rem;
+    margin-top: 2rem;
+    width: 98%;
+}
+
+.admin-table-header {
+    font-size: .8rem;
+}
+
+.admin-table-row {
+    height: 5rem;
+}
+
+.admin-table-opr-btn {
+    margin: 0 .2rem;
+    padding: 0 .2rem;
+}
+
+.admin-table-opr-icon {
+    color: #222f3e;
+    margin: 0;
+}
+
+.admin-table-opr-icon-trash {
+    color: #ee5253;
+    margin: 0;
+}
+
+.admin-table-time {
+    font-size: .8rem;
+    margin: 0;
+}
+
+.admin-table-lastColumn {
+    width: 6rem;
+}

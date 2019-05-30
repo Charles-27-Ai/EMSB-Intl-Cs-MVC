@@ -1,0 +1,42 @@
+﻿<div class="footer fixed-bottom">
+    <div class="d-flex justify-content-around px-5 mx-5">
+        <div class="media ml-3 text-left">
+            <img src="/Assets/Images/EMSB-intl-logo.png" alt="EMSB Intl Logo" class="emsb-footer-logo" />
+            <div class="media-body ml-2">
+                <h5 class="mt-2 dark-grey-font bold-font">EMSB, International Students</h5>
+                <ul className="list-unstyled">
+                    <li>Office 119, 6000 Fielding Avenue</li>
+                    <li>Montreal, QC H3X 1T4</li>
+                    <li>General Info: 514-483-7200 ext. 7258</li>
+                    <li>intstudent@emsb.qc.ca</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="media mr-3 text-right">
+            <div class="media-body mr-2">
+                <h5 class="mt-2 dark-grey-font bold-font">Office Hours</h5>
+                <ul className="list-unstyled">
+                    <li>Opening Hours: 8:00 am to 4:00 pm</li>
+                    <li>Guest time: 8:30 am to 2:30 pm</li>
+                    <li>General Info: 514-483-7200 ext. 7258</li>
+                    <li>
+                        Law 101 (eligibility) Office Hours:&nbsp;
+                        <a href="https://www.emsb.qc.ca/emsb/admissions/eligibility/office" target="_blank">here</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center">
+        <p class="mb-0 footer-links">&copy; English Montreal School Board, @DateTime.Now.Year</p>
+        <p class="mb-0 footer-links">
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "footer-links" }) |
+            @Html.ActionLink("About", "About", "Home", null, new { @class = "footer-links" }) |
+            @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "footer-links" }) |
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "footer-links" }) |
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "footer-links" })
+        </p>
+    </div>
+</div>

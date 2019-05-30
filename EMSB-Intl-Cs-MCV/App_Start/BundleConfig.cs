@@ -24,7 +24,7 @@ namespace EMSB_Intl_Cs_MCV
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/App.css"));
         }
     }
 }
