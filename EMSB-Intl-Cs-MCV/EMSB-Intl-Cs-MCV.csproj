@@ -335,7 +335,10 @@
     <Content Include="Views\Home\_Announce.cshtml" />
     <Content Include="Views\Home\_Stories.cshtml" />
     <Content Include="Views\Home\_Galleries.cshtml" />
-    <Content Include="Views\Admission\Admission.cshtml" />
+    <Content Include="Views\Admission\Step1.cshtml" />
+    <Content Include="Views\Admission\Step2.cshtml" />
+    <Content Include="Views\Admission\Step3.cshtml" />
+    <Content Include="Views\Admission\_QcEdu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

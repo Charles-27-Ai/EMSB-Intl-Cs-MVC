@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Admission Step 1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="text-center">
+        <div class="container my-3 border-bottom border-primary pb-1">
+            <div class="d-flex justify-content-center">
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Selected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 1", "Step1", "Admission")
+                        </h5>
+                    </div>
+                </div>
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 2", "Step2", "Admission")
+                        </h5>
+                    </div>
+                </div>
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 3", "Step3", "Admission")
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*Content*@
+        <div class="container">
+            Admission Step 1
+        </div>
+
+        @*QcEdu*@
+        @Html.Partial("_QcEdu")
+    </div>
