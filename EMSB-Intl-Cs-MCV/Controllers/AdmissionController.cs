@@ -9,6 +9,10 @@ namespace EMSB_Intl_Cs_MCV.Controllers
     public class AdmissionController : Controller
     {
         // GET: Admission
+        public ActionResult Admission()
+        {
+            return Step1();
+        }
         public ActionResult Step1()
         {
             ViewBag.Message = "把从 Model 传来的信息通过算法分发到 View";

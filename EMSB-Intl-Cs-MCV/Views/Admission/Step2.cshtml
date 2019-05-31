@@ -1,35 +1,109 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Admission Step2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="container text-center my-3 border-bottom border-primary pb-1">
-        <div class="d-flex justify-content-center">
-            <div class="media mx-3">
-                <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Selected icon">
-                <div class="media-body">
-                    <h5 class="mt-2 ml-2 admission-steps-text">
-                        @Html.ActionLink("Step 1", "Step1", "Admission")
-                    </h5>
+<div class="text-center">
+<div class="container text-center my-3 border-bottom border-primary pb-1">
+    <div class="d-flex justify-content-center">
+        <div class="media mx-3">
+            <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Selected icon">
+            <div class="media-body">
+                <h5 class="mt-2 media-body ml-2 admission-steps-text">
+                    @Html.ActionLink("Step 1", "Step1", "Admission", null, new {@class = "admission-steps-text"})
+                </h5>
+            </div>
+        </div>
+        <div class="media mx-3">
+            <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Deselected icon">
+            <div class="media-body">
+                <h5 class="mt-2 media-body ml-2 admission-steps-text">
+                    @Html.ActionLink("Step 2", "Step2", "Admission")
+                </h5>
+            </div>
+        </div>
+        <div class="media mx-3">
+            <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+            <div class="media-body">
+                <h5 class="mt-2 media-body ml-2 admission-steps-text">
+                    @Html.ActionLink("Step 3", "Step3", "Admission", null, new {@class = "admission-steps-text"})
+                </h5>
+            </div>
+        </div>
+    </div>
+    </div>
+    @*Content*@
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex flex-column align-items-center text-left mt-2">
+                    <div class="media my-2">
+                        <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+                        <div class="media-body ml-2">
+                            <p class="admission-text">The Parent/Guardian/Agency will then start the process. (Allow 6 - 20 weeks)</p>
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+                        <div class="media-body ml-2">
+                            <p class="admission-text">Apply for <b>CAQ</b> from Immigration, Diversité et Inclusion Québec: by first <b>register online and pay the fee</b> and then <b>mail the documents by post</b> to designated address.</p>
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+                        <div class="media-body ml-2">
+                            <p class="admission-text">With CAQ in hand, then apply for <b>Study Permit</b> from Canadian Federal Government through the online system. No mailing needed.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="media mx-3">
-                <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Deselected icon">
-                <div class="media-body">
-                    <h5 class="mt-2 ml-2 admission-steps-text">
-                        @Html.ActionLink("Step 2", "Step2", "Admission")
-                    </h5>
-                </div>
-            </div>
-            <div class="media mx-3">
-                <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
-                <div class="media-body">
-                    <h5 class="mt-2 ml-2 admission-steps-text">
-                    @Html.ActionLink("Step 3", "Step3", "Admission")
-                    </h5>
+            <div class="col-md-6">
+                <div class="d-flex flex-column align-items-start text-left my-4 pt-2 pl-3 border rounded">
+                    <a role="button" class="btn btn-link text-decoration-none" href="http://www.immigration-quebec.gouv.qc.ca/en/immigrate-settle/students/obtaining-authorizations/certificat-acceptation/index.html" target="_blank">
+                        <div class="media">
+                            <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon"/>
+                            <div class="media-body ml-2">
+                                <p class="admission-text">Steps to Apply for CAQ</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a role="button" class="btn btn-link text-decoration-none" href="https://www.immigration-quebec.gouv.qc.ca/en/electronic-services/caq-electronic/index.html" target="_blank">
+                        <div class="media">
+                            <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon"/>
+                            <div class="media-body ml-2">
+                                <p class="admission-text">CAQ Online Application Portal</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a role="button" class="btn btn-link text-decoration-none" href="/assets/pdfs/admissionDocs/CAQ-checklist-non-adult.pdf" target="_blank">
+                        <div class="media">
+                            <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon"/>
+                            <div class="media-body ml-2">
+                                <p class="admission-text">CAQ Application Checklist (non-adult)</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a role="button" class="btn btn-link text-decoration-none" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html" target="_blank">
+                        <div class="media">
+                            <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon"/>
+                            <div class="media-body ml-2">
+                                <p class="admission-text">Study Permit Online Application Portal</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a role="button" class="btn btn-link text-decoration-none" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/apply.html" target="_blank">
+                        <div class="media">
+                            <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon"/>
+                            <div class="media-body ml-2">
+                                <p class="admission-text">Study Permit Application Checklist</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
+    @*QcEdu*@
+    @Html.Partial("_QcEdu")
+</div>

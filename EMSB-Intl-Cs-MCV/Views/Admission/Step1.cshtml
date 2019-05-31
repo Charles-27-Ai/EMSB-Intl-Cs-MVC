@@ -1,43 +1,117 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Admission Step 1";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="text-center">
-        <div class="container my-3 border-bottom border-primary pb-1">
-            <div class="d-flex justify-content-center">
-                <div class="media mx-3">
-                    <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Selected icon">
-                    <div class="media-body">
-                        <h5 class="mt-2 ml-2 admission-steps-text">
-                            @Html.ActionLink("Step 1", "Step1", "Admission")
-                        </h5>
+<div class="text-center">
+    <div class="container my-3 border-bottom border-primary pb-1">
+        <div class="d-flex justify-content-center">
+            <div class="media mx-3">
+                <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Selected icon">
+                <div class="media-body">
+                    <h5 class="mt-2 ml-2 admission-steps-text">
+                        @Html.ActionLink("Step 1", "Step1", "Admission")
+                    </h5>
+                </div>
+            </div>
+            <div class="media mx-3">
+                <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+                <div class="media-body">
+                    <h5 class="mt-2 ml-2 admission-steps-text">
+                        @Html.ActionLink("Step 2", "Step2", "Admission", null, new { @class = "admission-steps-text" })
+                    </h5>
+                </div>
+            </div>
+            <div class="media mx-3">
+                <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+                <div class="media-body">
+                    <h5 class="mt-2 ml-2 admission-steps-text">
+                        @Html.ActionLink("Step 3", "Step3", "Admission", null, new { @class = "admission-steps-text" })
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Content*@
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex flex-column align-items-start text-left mt-2">
+                    <div class="media my-2">
+                        <img object src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+                        <div class="media-body ml-2">
+                            <p class="admission-text">The Parent/Guardian must complete the online application.</p>
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+                        <div class="media-body ml-2">
+                            <p class="admission-text">The Agent/Agency must read and complete the documents below and forward them to the EMSB (intstudent@emsb.qc.ca). Once approved, the agent/agency must complete the online application here.</p>
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark"/>
+
+                        <div class="media-body ml-2">
+                            <p class="admission-text">Once completed and approved, a school can be chosen with the interests of the student in mind. The Letters of Acceptance for both the C.A.Q. (Certificate d’acceptation du Québec) and Study Permit will be prepared. <b>(Allow 3 - 4 weeks)</b></p>
+                        </div>
                     </div>
                 </div>
-                <div class="media mx-3">
-                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
-                    <div class="media-body">
-                        <h5 class="mt-2 ml-2 admission-steps-text">
-                            @Html.ActionLink("Step 2", "Step2", "Admission")
-                        </h5>
-                    </div>
-                </div>
-                <div class="media mx-3">
-                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
-                    <div class="media-body">
-                        <h5 class="mt-2 ml-2 admission-steps-text">
-                            @Html.ActionLink("Step 3", "Step3", "Admission")
-                        </h5>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column align-items-center text-left">
+                    <button type="button" class="btn btn-primary mt-3">EMSB Online Application System</button>
+                    <div class="d-flex flex-column align-items-start text-left my-4 pt-2 pl-1 border rounded">
+                        <a role="button" class="btn btn-link text-decoration-none" href="/Assets/Pdfs/admissionDocs/Admission-Doc-1.pdf" target="_blank">
+                            <div class="media">
+                                <img src="/Assets/Images/admission-form.png" alt="form" class="img-fluid admission-form-icon"/>
+
+                                <div class="media-body ml-2">
+                                    <p class="admission-text">1. International Student Package and Agreement</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-link text-decoration-none" href="/Assets/Pdfs/admissionDocs/Admission-Doc-2.pdf" target="_blank">
+                            <div class="media">
+                                <img src="/Assets/Images/admission-form.png" alt="form" class="img-fluid admission-form-icon"/>
+
+                                <div class="media-body ml-2">
+                                    <p class="admission-text">2. Instructions for Wire Transfer Payment</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-link text-decoration-none" href="/Assets/Pdfs/admissionDocs/Admission-Doc-3.pdf" target="_blank">
+                            <div class="media">
+                                <img src="/Assets/Images/admission-form.png" alt="form" class="img-fluid admission-form-icon"/>
+                                <div class="media-body ml-2">
+                                    <p class="admission-text">3. Custodianship Declaration – Custodian for Minors Studying in Canada</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-link text-decoration-none" href="/Assets/Pdfs/admissionDocs/Admission-Doc-4.pdf" target="_blank">
+                            <div class="media">
+
+                                <img src="/Assets/Images/admission-form.png" alt="form" class="img-fluid admission-form-icon"/>
+
+                                <div class="media-body ml-2">
+                                    <p class="admission-text">4. Agency/Agent Qualification Application Form</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-link text-decoration-none" href="/Assets/Pdfs/admissionDocs/Admission-Doc-5.pdf" target="_blank">
+                            <div class="media">
+                                <img src="/Assets/Images/admission-form.png" alt="form" class="img-fluid admission-form-icon"/>
+                                <div class="media-body ml-2">
+                                    <p class="admission-text">5. Agency/Agent International Recruiting Agreement 2019-2020 School Year</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        @*Content*@
-        <div class="container">
-            Admission Step 1
-        </div>
-
-        @*QcEdu*@
-        @Html.Partial("_QcEdu")
     </div>
+
+    @*QcEdu*@
+    @Html.Partial("_QcEdu")
+</div>

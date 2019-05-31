@@ -1,35 +1,88 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Admission Step3";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container text-center my-3 border-bottom border-primary pb-1">
-    <div class="d-flex justify-content-center">
-        <div class="media mx-3">
-            <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Selected icon">
-            <div class="media-body">
-                <h5 class="mt-2 ml-2 admission-steps-text">
-                @Html.ActionLink("Step 1", "Step1", "Admission")
-                </h5>
+    <div class="text-center">
+        <div class="container my-3 border-bottom border-primary pb-1">
+            <div class="d-flex justify-content-center">
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Selected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 1", "Step1", "Admission", null, new { @class = "admission-steps-text" })
+                        </h5>
+                    </div>
+                </div>
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 2", "Step2", "Admission", null, new { @class = "admission-steps-text" })
+                        </h5>
+                    </div>
+                </div>
+                <div class="media mx-3">
+                    <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Deselected icon">
+                    <div class="media-body">
+                        <h5 class="mt-2 ml-2 admission-steps-text">
+                            @Html.ActionLink("Step 3", "Step3", "Admission")
+                        </h5>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="media mx-3">
-            <img src="/Assets/Images/admission-step-deselected.png" class="admission-steps-icon" alt="Deselected icon">
-            <div class="media-body">
-                <h5 class="mt-2 ml-2 admission-steps-text">
-                @Html.ActionLink("Step 2", "Step2", "Admission")
-                </h5>
+            @*Content*@
+            <div class="container my-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column align-items-start text-left mt-2">
+                            <p class="admission-text">After receiving the CAQ, the Custodian of the Student (for those requiring custodianship refer to Canadian Home Stay) will come to the EMSB with:</p>
+                            <div class="media my-1">
+                                <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark" />
+                                <div class="media-body ml-2 admission-text">
+                                    <p>The CAQ</p>
+                                </div>
+                            </div>
+                            <div class="media mb-1">
+                                <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark" />
+                                <div class="media-body ml-2 admission-text">
+                                    <p>The birth certificate of the student showing parents names (in their mother tongue and translated into either English or French).</p>
+                                </div>
+                            </div>
+                            <div class="media mb-1">
+                                <img src="/Assets/Images/admission-check.png" alt="checkmark" class="img-fluid admission-checkmark" />
+                                <div class="media-body ml-2 admission-text">
+                                    <p>A Certified Cheque or Money Order payable to the EMSB to cover the full period the student will attend school. </p>
+                                </div>
+                            </div>
+                            <p class="admission-text">We will then complete the registration and apply for the Certificate of Eligibility for the student to attend an English School. <b>(Allow 3 - 4 weeks)</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column align-items-start text-left my-3 pt-2 pl-3 border rounded">
+                            <a role="button" class="btn btn-link text-decoration-none" href="https://www.immigration-quebec.gouv.qc.ca/en/immigrate-settle/students/finding-out/education-costs.html" target="_blank">
+                                <div class="media">
+                                    <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon" />
+                                    <div class="media-body ml-2 admission-text">
+                                        <p>Education Cost for Foreign Students in Quebec</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a role="button" class="btn btn-link text-decoration-none" href="http://canadahomestaynetwork.ca" target="_blank">
+                                <div class="media">
+                                    <img src="/Assets/Images/admission-link.png" alt="link" class="img-fluid admission-link-icon" />
+                                    <div class="media-body ml-2 admission-text">
+                                        <p>Canada Homestay Network</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="media mx-3">
-            <img src="/Assets/Images/admission-step-selected.png" class="admission-steps-icon" alt="Deselected icon">
-            <div class="media-body">
-                <h5 class="mt-2 ml-2 admission-steps-text">
-                @Html.ActionLink("Step 3", "Step3", "Admission")
-                </h5>
-            </div>
-        </div>
-    </div>
-</div>
 
+            @*QcEdu*@
+            @Html.Partial("_QcEdu")
+        
+    </div>
