@@ -20,12 +20,10 @@ namespace EMSB_Intl_Cs_MCV
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/fontawesome/fontawesome.js"));
+                      "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/fontawesome.css",
                       "~/Content/app.css"));
         }
     }

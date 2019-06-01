@@ -1,0 +1,112 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model EMSB_Intl_Cs_MCV.Models.School
+
+@{
+    ViewBag.Title = "Face";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@if (Model != null)
+{
+    var faceSchool = 
+}*@
+<div class="text-center">
+    @Html.Partial("_EmsbCals")
+    
+    <div class="container px-5">
+        
+        <nav aria-label="breadcrumb" class="mx-2 school-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="/Schools" class="lato-font">School Picker</a>
+                </li>
+                <li class="breadcrumb-item active lato-font" aria-current="page">
+                    @*@{ Html.RenderAction("Face", "Schools");}*@
+                    @Model.Name
+                </li>
+            </ol>
+        </nav>
+        
+        <div class="row text-left mx-2 mb-3">
+            <div class="col-lg-5 mb-3">
+                Carousel
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+
+                    <div class="col-sm-12 mt-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-intro.png" class="img-fluid" alt="Intro">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">@Model.Intro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 mb-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-address.png" class="img-fluid" alt="Address">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">@Model.Address</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 my-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-call.png" class="img-fluid" alt="Phone number">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">@Model.Phone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 my-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-email.png" class="img-fluid" alt="Email">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">@Model.Email</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 my-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-website.png" class="img-fluid" alt="Website">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">@Model.Website</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 my-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-calender.png" class="img-fluid" alt="Calendar">
+                            <div class="media-body">
+                                <p class="ml-2 mt-1">2018-2019 School Calendar</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 my-1">
+                        <div class="media">
+                            <img src="/Assets/Images/schools/school-mission.png" class="img-fluid" alt="Missions">
+                            <div class="media-body ml-2 mt-1">
+                                <div class="d-flex justify-content-start">
+                                    <p><b>Philosophy / Mission / Objectives</b></p>
+                                    <i class="fas fa-plus-circle"></i>
+                                    <i class="fas fa-minus-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        @*Philo-Dropdown*@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

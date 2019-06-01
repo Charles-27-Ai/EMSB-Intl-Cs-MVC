@@ -149,6 +149,30 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             return View();
         }
 
-        public ActionResult 
+        public ActionResult Face()
+        {
+            var faceSchool = new School()
+            {
+                Name = "F.A.C.E.School",
+                ImgUrl = new string[] {
+                "/Assets/Images/schools/FACE-0.jpg",
+                "/Assets/Images/schools/FACE-0.jpg",
+                "/Assets/Images/schools/FACE-0.jpg"
+                    },
+                Intro = "Fine Arts Core Education (FACE) High School is located north of Sherbrooke St. West and is accessible by bus, McGill Metro, and Central or Windsor Train Stations.",
+                Address = "3449 University Street, Montreal, QC, H3A 2A8",
+                Phone = "(514) 350-8899",
+                Email = "face@emsb.qc.ca",
+                Website = "http://face-english.csdm.ca",
+                Philo = new string[]
+                    {
+                    "To combine academic and artistic development which provides our students with many challenges in which they can flourish and develop their full potential.",
+                    "To teach our important values which are openess of mind, respect, responsibility, independence, self-discipline, accomplishment and self-esteem.",
+                    "To develop respect for others, an appreciation for the many facets of the world, an open mind, a more active vision of life, teamwork, and to foster intellectual, emotional, and spiritual growth."
+                }
+            };
+
+            return View(faceSchool);
+        }
     }
 }
