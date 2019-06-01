@@ -10,108 +10,145 @@ namespace EMSB_Intl_Cs_MCV.Controllers
     public class SchoolsController : Controller
     {
 
-        public ActionResult AllSchools()
+        public ActionResult SchoolPickerRow1()
         {
+            List<School> list = new List<School>();
 
-            var faceLogo = new School
+            list.Add(new School
             {
                 Name = "F.A.C.E. School",
                 RouteName = "face",
                 IconUrl = "/Assets/Images/schoolLogos/FACE.png",
                 IconWidth = 120
-            };
-            var jlLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "James Lyng High School",
                 RouteName = "jameslyng",
                 IconUrl = "/Assets/Images/schoolLogos/JL.png",
                 IconWidth = 120
-            };
-            var jfkLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "John F. Kennedy School",
                 RouteName = "johnfkennedy",
                 IconUrl = "/Assets/Images/schoolLogos/JFK.png",
                 IconWidth = 120
-            };
-            var lbpLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Lester B. Pearson School",
                 RouteName = "leasterbpearson",
-                IconUrl = "/Assets/Images/schoolLogos/LBP.png",
+                IconUrl = "/Assets/Images/schoolLogos/LBP.jpg",
                 IconWidth = 120
-            };
-            var lhaLogo = new School
+            });
+
+            return PartialView("_PickerLogo", list);
+        }
+
+        public ActionResult SchoolPickerRow2()
+        {
+            List<School> list = new List<School>();
+
+            list.Add(new School
             {
                 Name = "LaurenHill Academy & LaurenHill Junior Campus",
                 RouteName = "laurenhill",
-                IconUrl = "/Assets/Images/schoolLogos/LHA.png",
+                IconUrl = "/Assets/Images/schoolLogos/LHA.jpg",
                 IconWidth = 120
-            };
-            var jpiLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "John Paul I Junior High School",
                 RouteName = "johnpauli",
-                IconUrl = "/Assets/Images/schoolLogos/JP.png",
+                IconUrl = "/Assets/Images/schoolLogos/JP.jpg",
                 IconWidth = 120
-            };
-            var lmacLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Laurier MacDonald High School",
                 RouteName = "lauriermacdonald",
-                IconUrl = "/Assets/Images/schoolLogos/LMac.png",
+                IconUrl = "/Assets/Images/schoolLogos/LMac.jpg",
                 IconWidth = 120
-            };
-            var mmaLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Marymount Academy",
                 RouteName = "marymount",
                 IconUrl = "/Assets/Images/schoolLogos/MM.png",
                 IconWidth = 120
-            };
-            var rshLogo = new School
+            });
+
+            return PartialView("_PickerLogo", list);
+
+        }
+
+        public ActionResult SchoolPickerRow3()
+        {
+            List<School> list = new List<School>();
+
+            list.Add(new School
             {
                 Name = "Rosemount High School",
                 RouteName = "rousemount",
-                IconUrl = "/Assets/Images/schoolLogos/RM.png",
+                IconUrl = "/Assets/Images/schoolLogos/RM.jpg",
                 IconWidth = 120
-            };
-            var rvLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Royal Vale School",
                 RouteName = "royalvale",
                 IconUrl = "/Assets/Images/schoolLogos/RV.png",
                 IconWidth = 120
-            };
-            var vmcLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Vincent Massey Collegiate",
                 RouteName = "vincentmassey",
-                IconUrl = "/Assets/Images/schoolLogos/VMC.png",
+                IconUrl = "/Assets/Images/schoolLogos/VMC.jpg",
                 IconWidth = 120
-            };
-            var wmhLogo = new School
+            });
+
+            list.Add(new School
             {
                 Name = "Westmount High School",
                 RouteName = "westmount",
-                IconUrl = "/Assets/Images/schoolLogos/WM.png",
+                IconUrl = "/Assets/Images/schoolLogos/WM.jpg",
                 IconWidth = 120
-            };
-            var rwaLogo = new School
+            });
+
+            return PartialView("_PickerLogo", list);
+        }
+
+        public ActionResult SchoolPickerRow4()
+        {
+            List<School> list = new List<School>();
+
+            list.Add(new School
             {
                 Name = "Royal West Academy",
                 RouteName = "royalwest",
-                IconUrl = "/Assets/Images/schoolLogos/RWA.png",
+                IconUrl = "/Assets/Images/schoolLogos/RWA.jpg",
                 IconWidth = 240
-            };
+            });
 
-            return View();
-            //接下来就该在 AllSchool 页面 render 上面 Model 生成的数据内容了
+            return PartialView("_PickerLogo", list);
         }
 
-        
+        public ActionResult AllSchools()
+        {
 
+            return View();
+        }
 
-        //var movie = new Movie() {Name = "Shrek!"};
+        public ActionResult 
     }
 }

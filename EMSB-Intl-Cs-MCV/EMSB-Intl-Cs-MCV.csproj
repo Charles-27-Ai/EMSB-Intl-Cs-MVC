@@ -389,6 +389,7 @@
     <Content Include="Views\Students\Students.cshtml" />
     <Content Include="Views\Schools\AllSchools.cshtml" />
     <Content Include="Views\Schools\_EmsbCals.cshtml" />
+    <Content Include="Views\Schools\_PickerLogo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

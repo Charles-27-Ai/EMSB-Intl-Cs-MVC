@@ -1,4 +1,7 @@
-﻿
+﻿@using EMSB_Intl_Cs_MCV.Controllers
+@using EMSB_Intl_Cs_MCV.Models
+@model EMSB_Intl_Cs_MCV.Models.School
+
 @{
     ViewBag.Title = "AllSchools";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,6 +10,25 @@
     @*EMSB Cals*@
     @Html.Partial("_EmsbCals")
     @*School Picker*@
+    
+    <div class="container my-4">
+        <div class="row my-5">
+            @*@Html.Partial("_PickerLogo")*@
+            @*@{ Html.RenderAction("_PickerLogo", "Schools");}*@
+
+            @{ Html.RenderAction("SchoolPickerRow1", "Schools");}
+        </div>
+
+        <div class="row mb-5">
+            @{ Html.RenderAction("SchoolPickerRow2", "Schools");}
+            </div>
+        <div class="row mb-5">
+            @{ Html.RenderAction("SchoolPickerRow3", "Schools");}
+        </div>
+        <div class="row mb-5">
+            @{ Html.RenderAction("SchoolPickerRow4", "Schools");}
+            </div>
+    </div>
 </div>
-<h2>AllSchools</h2>
+
 

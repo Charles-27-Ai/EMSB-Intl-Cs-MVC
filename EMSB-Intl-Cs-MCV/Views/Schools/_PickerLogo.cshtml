@@ -1,0 +1,15 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model IEnumerable<EMSB_Intl_Cs_MCV.Models.School>
+
+@if (Model != null)
+{
+    foreach (var schoolLogo in Model) 
+    {
+        <div class="col">
+            <a href="/Schools/@schoolLogo.RouteName">
+                <img src="@schoolLogo.IconUrl" width="@schoolLogo.IconWidth" class="img-fluid" alt="@schoolLogo.Name" />
+            </a>
+        </div>
+    }
+}
+
