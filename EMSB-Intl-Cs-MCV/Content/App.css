@@ -284,6 +284,10 @@ body {
     color: white;
 }
 
+.fontIcons {
+    margin-left: 2rem;
+}
+
 .contact-icon-group {
     margin: 1.8rem 0 0 0;
 }

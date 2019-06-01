@@ -6,10 +6,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*@if (Model != null)
-{
-    var faceSchool = 
-}*@
+@{
+    var philoIsOpen = false;
+    var plusBtnClass =  philoIsOpen ? "d-none" : "btn btn-link";
+    var minusBtnClass = philoIsOpen ? "btn btn-link" :"d-none";
+}
 <div class="text-center">
     @Html.Partial("_EmsbCals")
     
@@ -92,15 +93,43 @@
                         <div class="media">
                             <img src="/Assets/Images/schools/school-mission.png" class="img-fluid" alt="Missions">
                             <div class="media-body ml-2 mt-1">
-                                <div class="d-flex justify-content-start">
-                                    <p><b>Philosophy / Mission / Objectives</b></p>
-                                    <i class="fas fa-plus-circle"></i>
-                                    <i class="fas fa-minus-circle"></i>
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <p><b>Philosophy / Mission / Goal</b></p>
+                                    @*<button type="button" class="@plusBtnClass" onclick="toggleClass(@philoIsOpen)">
+                                        <img src="/Assets/Images/schools/plus-btn.png" class="ml-1 mb-2 pb-2" alt="Plus button" />
+                                    </button>
+                                    <button type="button" class="@minusBtnClass" onclick="!@philoIsOpen">
+                                        <img src="/Assets/Images/schools/minus-btn.png" class="ml-1 mb-2 pb-2" alt="Minus button" />
+                                    </button>*@
+                                    <button type="button" class="btn btn-link" data-toggle="collapse" href="#schoolPhilo" aria-expanded="False" aria-controls="schoolPhilo">
+                                        <img src="/Assets/Images/schools/plus-btn.png" class="ml-1 mb-2 pb-2" alt="Plus button" />
+                                    </button>
+                                    @*<button type="button" class="btn btn-link" id="minusButton">
+                                        <img src="/Assets/Images/schools/minus-btn.png" class="ml-1 mb-2 pb-2" alt="Minus button" />
+                                    </button>*@
+                                    @*<script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $("#minusButton").hide();
+                                            $("#plusButton").click(function() {
+                                                $("#minusButton").toggle();
+                                            });
+                                        });
+                                    </script>*@
                                 </div>
                             </div>
                         </div>
                         
                         @*Philo-Dropdown*@
+                        @*{
+                            @*if (philoIsOpen)
+                            {
+                                <p>We'll have a great meal!</p>
+                            }*
+                        }*@
+                        
+                        <div class="collapse" id="schoolPhilo">
+                            <p>This is what we like most!</p>
+                        </div>
                     </div>
 
                 </div>
@@ -109,4 +138,6 @@
 
     </div>
 </div>
+
+
 

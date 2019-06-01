@@ -153,7 +153,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
         {
             var faceSchool = new School()
             {
-                Name = "F.A.C.E.School",
+                Name = "F.A.C.E. School",
                 ImgUrl = new string[] {
                 "/Assets/Images/schools/FACE-0.jpg",
                 "/Assets/Images/schools/FACE-0.jpg",
