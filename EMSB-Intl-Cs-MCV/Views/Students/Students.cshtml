@@ -1,4 +1,6 @@
-﻿
+﻿@*@model EMSB_Intl_Cs_MCV.Models.StudentTitle*@
+
+
 @{
     ViewBag.Title = "Students";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +8,6 @@
 
 <h2>Students</h2>
 
+@Html.Partial("_StudentTitle")
+
+@Html.Partial("_StudentCard")

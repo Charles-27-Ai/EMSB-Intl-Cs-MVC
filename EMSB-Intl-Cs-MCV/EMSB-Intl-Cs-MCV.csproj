@@ -124,6 +124,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdmissionController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FieldTripsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SchoolsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
@@ -132,7 +133,7 @@
     </Compile>
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\School.cs" />
-    <Compile Include="Models\StudentCard.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -407,6 +408,9 @@
     <Content Include="Views\Schools\Marymount.cshtml" />
     <Content Include="Views\Schools\LaurierMacdonald.cshtml" />
     <Content Include="Views\Students\_StudentCard.cshtml" />
+    <Content Include="Views\Students\_StudentTitle.cshtml" />
+    <Content Include="Views\Students\FieldTrips.cshtml" />
+    <Content Include="Views\Students\FieldTrips\Ziplining.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

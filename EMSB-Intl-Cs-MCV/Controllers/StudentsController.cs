@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 using EMSB_Intl_Cs_MCV.Models;
+using Microsoft.Win32;
 
 namespace EMSB_Intl_Cs_MCV.Controllers
 {
@@ -12,17 +15,49 @@ namespace EMSB_Intl_Cs_MCV.Controllers
         // GET: Student
         public ActionResult FieldTrips()
         {
-            return View();
+            
+            dynamic myModel = new System.Dynamic.ExpandoObject();
+            myModel.Titles = generateFieldTripTitle();
+            myModel.Cards = generateFieldTripCard();
+            return View(myModel);
+
         }
 
-        // Field Trip 
-        public ActionResult FieldTripsCard()
+        private List<StudentTitle> generateFieldTripTitle()
         {
-            List<StudentCard> list = new List<StudentCard>();
+            List<StudentTitle> ftTitles = new List<StudentTitle>();
 
-            list.Add(new StudentCard
+            ftTitles.Add(new StudentTitle()
             {
-                RouteName = "ziplining",
+                Name = "Field Trips",
+                Route = "/students/",
+                Url = "/Assets/Images/students-bus-selected.png",
+                Class = "mt-2 mr-2"
+            });
+            ftTitles.Add(new StudentTitle()
+            {
+                Name = "Study Assist",
+                Route = "/students/study",
+                Url = "/Assets/Images/students-bus-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            ftTitles.Add(new StudentTitle()
+            {
+                Name = "Health Support",
+                Route = "/students/health",
+                Url = "/Assets/Images/students-bus-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            return ftTitles;
+        }
+
+        private List<StudentCard> generateFieldTripCard()
+        {
+            List<StudentCard> ftCards = new List<StudentCard>();
+
+            ftCards.Add(new StudentCard()
+            {
+                RouteName = "fieldtrips/ziplining",
                 ImgUrl = "/Assets/Images/fieldTrips/ziplining.jpg",
                 IconUrl = "/Assets/Images/fieldTrips/ziplining-bg.png",
                 AltText = "Ziplining",
@@ -31,9 +66,9 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 SubTitle = "Marieville, Québec"
             });
 
-            list.Add(new StudentCard
+            ftCards.Add(new StudentCard()
             {
-                RouteName = "skisnowboarding",
+                RouteName = "fieldtrips/skisnowboarding",
                 ImgUrl = "/Assets/Images/fieldTrips/ski.jpg",
                 IconUrl = "/Assets/Images/fieldTrips/ski-bg.png",
                 AltText = "Ski",
@@ -42,9 +77,9 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 SubTitle = "Mont Rinaud, Québec"
             });
 
-            list.Add(new StudentCard
+            ftCards.Add(new StudentCard()
             {
-                RouteName = "qccity",
+                RouteName = "fieldtrips/qccity",
                 ImgUrl = "/assets/images/fieldTrips/qc-city.jpg",
                 IconUrl = "/assets/images/fieldTrips/qc-city-bg.png",
                 AltText = "QC City",
@@ -53,9 +88,9 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 SubTitle = "Québec City, Québec"
             });
 
-            list.Add(new StudentCard
+            ftCards.Add(new StudentCard()
             {
-                RouteName = "sugarshack",
+                RouteName = "fieldtrips/sugarshack",
                 ImgUrl = "/assets/images/fieldTrips/sugar-shack.jpg",
                 IconUrl = "/assets/images/fieldTrips/sugar-shack-bg.png",
                 AltText = "Sugar Shack",
@@ -64,9 +99,9 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 SubTitle = "Sucrie de la Montagne, Québec"
             });
 
-            return PartialView("_StudentCard", list);
-
+            return ftCards;
         }
+
 
         public ActionResult StudyAssist()
         {
@@ -78,4 +113,6 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             return View();
         }
     }
+
+
 }

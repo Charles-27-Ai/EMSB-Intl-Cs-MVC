@@ -1,3 +1,31 @@
-﻿@*Render Student Card Here*@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model dynamic
+    
+<div class="container">
+    <div class="row">
+        @foreach (StudentCard card in Model.Cards)
+        {
+            <div class="col-md-6 my-1">
+                <div class="card border rounded">
+                    <img src="@card.ImgUrl" class="card-img-top img-fluid" width="100%" alt="@card.AltText">
+                    <div class="card-body bg-primary">
+                        
+                        <div class="media">
+                            <img src="@card.IconUrl" class="students-field-trip-icon" alt="@card.AltText">
+                            <div class="media-body ml-2 mt-1">
+                                <p class="@card.HeadingFont">@card.Heading</p>
+                                <div class="d-flex justify-content-between">
+                                    <p class="students-field-trip-location">@card.SubTitle</p>
+                                    <a href="Students/@card.RouteName">
+                                        <img src="/Assets/Images/schools/school-website.png" alt="Map"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

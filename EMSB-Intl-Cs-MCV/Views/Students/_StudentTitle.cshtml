@@ -1,0 +1,21 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model dynamic
+
+
+<div class="container my-2 border-bottom border-primary pb-1">
+    <div class="d-flex justify-content-center">
+        @foreach (StudentTitle title in Model.Titles)
+        {
+            <a href="@title.Route">
+                <div class="media mx-3">
+                    <div class="media-body">
+                        <p class="@title.Class">
+                            @title.Name
+                        </p>
+                    </div>
+                    <img src="@title.Url" alt="Icon" class="students-tag-icon" />
+                </div>
+            </a>
+        }
+    </div>
+</div>
