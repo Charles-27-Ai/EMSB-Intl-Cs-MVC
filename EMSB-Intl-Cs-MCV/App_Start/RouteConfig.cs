@@ -22,7 +22,13 @@ namespace EMSB_Intl_Cs_MCV
             routes.MapRoute(
                 "Schools",
                 "Schools",
-                new {Controller = "Schools", Action = "AllSchools", schoolName = UrlParameter.Optional}
+                new { Controller = "Schools", Action = "AllSchools", schoolName = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                "Students",
+                "Students",
+                new { Controller = "Students", Action = "FieldTrips", studentEvent = UrlParameter.Optional }
             );
 
             routes.MapRoute(

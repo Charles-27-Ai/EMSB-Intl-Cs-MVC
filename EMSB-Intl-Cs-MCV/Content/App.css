@@ -16,7 +16,10 @@ html {
     display: none;
 }
 
-
+.dropdown-btn {
+    margin: .3rem 0 0 .4rem;
+    padding: 0 !important;
+}
 
 @media (min-width: 576px) {
     html {
@@ -444,3 +447,5 @@ a:hover {
 .admin-table-lastColumn {
     width: 6rem;
 }
+
+

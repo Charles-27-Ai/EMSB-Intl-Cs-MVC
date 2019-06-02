@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\School.cs" />
+    <Compile Include="Models\StudentCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -392,6 +393,20 @@
     <Content Include="Views\Schools\_EmsbCals.cshtml" />
     <Content Include="Views\Schools\_PickerLogo.cshtml" />
     <Content Include="Views\Schools\Face.cshtml" />
+    <Content Include="Views\Schools\_IndividualSchool.cshtml" />
+    <Content Include="Views\Schools\JamesLyng.cshtml" />
+    <Content Include="Views\Schools\JohnPaulI.cshtml" />
+    <Content Include="Views\Schools\LaurenHill.cshtml" />
+    <Content Include="Views\Schools\LesterBPearson.cshtml" />
+    <Content Include="Views\Schools\JohnFKennedy.cshtml" />
+    <Content Include="Views\Schools\RoyalWest.cshtml" />
+    <Content Include="Views\Schools\Westmount.cshtml" />
+    <Content Include="Views\Schools\VincentMassey.cshtml" />
+    <Content Include="Views\Schools\RoyalVale.cshtml" />
+    <Content Include="Views\Schools\Rosemount.cshtml" />
+    <Content Include="Views\Schools\Marymount.cshtml" />
+    <Content Include="Views\Schools\LaurierMacdonald.cshtml" />
+    <Content Include="Views\Students\_StudentCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
