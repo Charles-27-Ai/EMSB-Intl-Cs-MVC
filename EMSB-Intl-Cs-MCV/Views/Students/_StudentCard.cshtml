@@ -16,8 +16,8 @@
                                 <p class="@card.HeadingFont">@card.Heading</p>
                                 <div class="d-flex justify-content-between">
                                     <p class="students-field-trip-location">@card.SubTitle</p>
-                                    <a href="Students/@card.RouteName">
-                                        <img src="/Assets/Images/schools/school-website.png" alt="Map"/>
+                                    <a href="@Url.Action(@card.RouteName, "FieldTrips")">
+                                        <img src="/Assets/Images/schools/school-website.png" alt="Map" />
                                     </a>
                                 </div>
                             </div>

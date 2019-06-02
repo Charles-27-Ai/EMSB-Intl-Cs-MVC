@@ -408,9 +408,13 @@
     <Content Include="Views\Schools\Marymount.cshtml" />
     <Content Include="Views\Schools\LaurierMacdonald.cshtml" />
     <Content Include="Views\Students\_StudentCard.cshtml" />
-    <Content Include="Views\Students\_StudentTitle.cshtml" />
+    <Content Include="Views\Shared\_StudentTitle.cshtml" />
     <Content Include="Views\Students\FieldTrips.cshtml" />
-    <Content Include="Views\Students\FieldTrips\Ziplining.cshtml" />
+    <Content Include="Views\FieldTrips\Ziplining.cshtml" />
+    <Content Include="Views\FieldTrips\Ski.cshtml" />
+    <Content Include="Views\FieldTrips\QcCity.cshtml" />
+    <Content Include="Views\FieldTrips\SugarShack.cshtml" />
+    <Content Include="Views\FieldTrips\_IndividualFieldTrip.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

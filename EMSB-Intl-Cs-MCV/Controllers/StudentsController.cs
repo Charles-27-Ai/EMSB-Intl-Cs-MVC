@@ -30,21 +30,21 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             ftTitles.Add(new StudentTitle()
             {
                 Name = "Field Trips",
-                Route = "/students/",
+                Route = "/Students/Fieldtrips",
                 Url = "/Assets/Images/students-bus-selected.png",
                 Class = "mt-2 mr-2"
             });
             ftTitles.Add(new StudentTitle()
             {
                 Name = "Study Assist",
-                Route = "/students/study",
+                Route = "/Students/Study",
                 Url = "/Assets/Images/students-bus-deselected.png",
                 Class = "mt-2 mr-2 student-categories-text"
             });
             ftTitles.Add(new StudentTitle()
             {
                 Name = "Health Support",
-                Route = "/students/health",
+                Route = "/Students/Health",
                 Url = "/Assets/Images/students-bus-deselected.png",
                 Class = "mt-2 mr-2 student-categories-text"
             });
@@ -57,7 +57,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             ftCards.Add(new StudentCard()
             {
-                RouteName = "fieldtrips/ziplining",
+                RouteName = "Ziplining",
                 ImgUrl = "/Assets/Images/fieldTrips/ziplining.jpg",
                 IconUrl = "/Assets/Images/fieldTrips/ziplining-bg.png",
                 AltText = "Ziplining",
@@ -68,7 +68,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             ftCards.Add(new StudentCard()
             {
-                RouteName = "fieldtrips/skisnowboarding",
+                RouteName = "Ski",
                 ImgUrl = "/Assets/Images/fieldTrips/ski.jpg",
                 IconUrl = "/Assets/Images/fieldTrips/ski-bg.png",
                 AltText = "Ski",
@@ -79,7 +79,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             ftCards.Add(new StudentCard()
             {
-                RouteName = "fieldtrips/qccity",
+                RouteName = "Qccity",
                 ImgUrl = "/assets/images/fieldTrips/qc-city.jpg",
                 IconUrl = "/assets/images/fieldTrips/qc-city-bg.png",
                 AltText = "QC City",
@@ -90,7 +90,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             ftCards.Add(new StudentCard()
             {
-                RouteName = "fieldtrips/sugarshack",
+                RouteName = "Sugarshack",
                 ImgUrl = "/assets/images/fieldTrips/sugar-shack.jpg",
                 IconUrl = "/assets/images/fieldTrips/sugar-shack-bg.png",
                 AltText = "Sugar Shack",
