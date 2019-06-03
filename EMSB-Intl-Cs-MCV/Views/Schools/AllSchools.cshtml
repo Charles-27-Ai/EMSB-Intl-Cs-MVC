@@ -9,12 +9,10 @@
 <div class="text-center">
     @*EMSB Cals*@
     @Html.Partial("_EmsbCals")
+
     @*School Picker*@
-    
     <div class="container my-4">
         <div class="row my-5">
-            @*@Html.Partial("_PickerLogo")*@
-            @*@{ Html.RenderAction("_PickerLogo", "Schools");}*@
 
             @{ Html.RenderAction("SchoolPickerRow1", "Schools");}
         </div>

@@ -50,6 +50,12 @@ namespace EMSB_Intl_Cs_MCV
             );
 
             routes.MapRoute(
+                "Contacts",
+                "Contacts",
+                new { Controller = "Contacts", Action = "Contacts", contactInfo = UrlParameter.Optional}
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

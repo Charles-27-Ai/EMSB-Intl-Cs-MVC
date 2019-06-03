@@ -1,0 +1,48 @@
+﻿@using System.Activities.Statements
+@using EMSB_Intl_Cs_MCV.Models
+@model IEnumerable<EMSB_Intl_Cs_MCV.Models.Contact>
+
+@if (Model != null)
+{
+    foreach (var leader in Model)
+    {
+        <div class="container mt-4 mb-3">
+            <div class="d-flex flex-column align-content-between">
+                <h4 class="my-1 lato-font bold-font blue-font">
+                    Director of School Organization - International Students
+                </h4>
+                <div class="d-flex justify-content-center">
+                    <div class="media my-2">
+                        <img src="@leader.Icon" class="img-fl" alt="Leader">
+                        <div class="media-body mt-3 mx-3">
+                            <h5>@leader.Name</h5>
+                        </div>
+                    </div>
+                    <button type="button" class="dropdown-btn btn btn-link text-decoration-none" data-toggle="collapse" href="#leaderContact" aria-expanded="False" aria-controls="leaderContact">
+                        <div class="d-flex justify-content-end align-items-center contact-icon-group">
+                            <img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-2 pb-2" alt="Plus button" />
+                            <img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-2 pb-2" alt="Plus button" />
+                            <img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-2 pb-2" alt="Plus button" />
+                        </div>
+                    </button>
+                </div>
+                <div class="collapse" id="leaderContact">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3">
+                            @*Collapse*@
+                            <div class="d-flex flex-column align-items-start text-left border mb-2 pl-2 pt-2 rounded">
+                                <h5>@leader.Post</h5>
+                                <h5 class="border-bottom border-info">Phone number</h5>
+                                <p>@leader.Phone</p>
+                                <h5 class="border-bottom border-info">Email</h5>
+                                <p>@leader.Email</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    }
+    
+}
+

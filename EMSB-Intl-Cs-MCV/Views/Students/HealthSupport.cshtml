@@ -1,0 +1,27 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+
+@{
+    ViewBag.Title = "HealthSupport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        @{ Html.RenderAction("HealthTitle", "Students");}
+
+        <div class="container">
+            <div class="row my-2">
+                @*Card 1*@
+                @{ Html.RenderAction("HealthCard1", "Students");}
+
+                @*List 1*@
+                @{ Html.RenderAction("HealthCard2", "Students");}
+
+                @*Card 2*@
+                @{ Html.RenderAction("HealthLink1", "Students");}
+
+                @*List 2*@
+                @{ Html.RenderAction("HealthLink2", "Students");}
+            </div>
+        </div>
+    </div>
+

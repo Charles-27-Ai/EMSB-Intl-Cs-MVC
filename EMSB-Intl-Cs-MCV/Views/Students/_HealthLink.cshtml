@@ -1,0 +1,21 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model IEnumerable<EMSB_Intl_Cs_MCV.Models.StudentList>
+    
+@if (Model != null)
+{
+    <div class="col-md-6 my-1">
+        <div class="d-flex flex-column align-items-start my-1 py-2 pl-3 border rounded">
+            @foreach (var link in Model)
+            {
+                <a href="@link.LinkUrl" role="button" class="text-decoration-none student-link-text" target="_blank">
+                    <div class="media my-2">
+                        <img src="@link.LinkIcon" class="students-list-icon" alt="@link.LinkText">
+                        <div class="media-body">
+                            <h5 class="ml-2 mt-3 pt-1">@link.LinkHeading</h5>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+}

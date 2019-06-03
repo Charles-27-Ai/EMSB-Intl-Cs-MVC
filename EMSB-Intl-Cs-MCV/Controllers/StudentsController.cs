@@ -62,14 +62,14 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             {
                 Name = "Study Assist",
                 Route = "/Students/StudyAssist",
-                Url = "/Assets/Images/students-bus-deselected.png",
+                Url = "/Assets/Images/students-study-deselected.png",
                 Class = "mt-2 mr-2 student-categories-text"
             });
             ftTitles.Add(new StudentTitle()
             {
                 Name = "Health Support",
                 Route = "/Students/HealthSupport",
-                Url = "/Assets/Images/students-bus-deselected.png",
+                Url = "/Assets/Images/students-health-deselected.png",
                 Class = "mt-2 mr-2 student-categories-text"
             });
             return ftTitles;
@@ -152,14 +152,14 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             {
                 Name = "Study Assist",
                 Route = "/Students/StudyAssist",
-                Url = "/Assets/Images/students-bus-selected.png",
+                Url = "/Assets/Images/students-study-selected.png",
                 Class = "mt-2 mr-2"
             });
             stTitles.Add(new StudentTitle()
             {
                 Name = "Health Support",
                 Route = "/Students/HealthSupport",
-                Url = "/Assets/Images/students-bus-deselected.png",
+                Url = "/Assets/Images/students-health-deselected.png",
                 Class = "mt-2 mr-2 student-categories-text"
             });
             return stTitles;
@@ -167,9 +167,9 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
         private List<StudentCard> generateStudyCardRow1()
         {
-            List<StudentCard> stCards1 = new List<StudentCard>();
+            List<StudentCard> htCards = new List<StudentCard>();
 
-            stCards1.Add(new StudentCard()
+            htCards.Add(new StudentCard()
             {
                 RouteName = "Rosettastone",
                 ImgUrl = "/Assets/Images/studyAssist/study-rosetta.jpg",
@@ -180,7 +180,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 SubTitle = "With free full-access licence from EMSBc"
             });
 
-            return stCards1;
+            return htCards;
         }
 
         private List<StudentCard> generateStudyCardRow2()
@@ -258,12 +258,241 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             return stLists;
         }
 
+        // 改用 return Partial View 的形式独立 render Partial View
+        public ActionResult HealthCard1()
+        {
+            List<StudentCard> htCards = new List<StudentCard>();
 
+            htCards.Add(new StudentCard()
+            {
+                RouteName = "https://www.guard.me",
+                ImgUrl = "/Assets/Images/healthSupport/health-guardMe.jpg",
+                IconUrl = "/Assets/Images/healthSupport/health-guardMe-icon.png",
+                AltText = "Guard.Me",
+                Heading = "Guard.me Health Insurance",
+                HeadingFont = "student-study-health-heading",
+                SubTitle = "Protect health of all international students"
+            });
 
+            return PartialView("_HealthCard", htCards);
+        }
+
+        public ActionResult HealthCard2()
+        {
+            List<StudentCard> htCards = new List<StudentCard>();
+
+            htCards.Add(new StudentCard()
+            {
+                RouteName = "https://keepmesafe.myissp.com",
+                ImgUrl = "/Assets/Images/healthSupport/health-mental.jpg",
+                IconUrl = "/Assets/Images/healthSupport/health-mental-icon.png",
+                AltText = "Keep.meSAFE",
+                Heading = "Keep.me Safe Multilingual Support",
+                HeadingFont = "student-study-health-heading",
+                SubTitle = "Help int'l students overcome life challenges"
+            });
+
+            return PartialView("_HealthCard", htCards);
+        }
+
+        public ActionResult HealthLink1()
+        {
+            List<StudentList> htLinks = new List<StudentList>();
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-clinique-icon.png",
+                LinkText = "Clinic",
+                LinkHeading = "Find a Nearby Clinic"
+                
+            });
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-claim-icon.png",
+                LinkText = "Claim",
+                LinkHeading = "Make a Claim After Clinic Visit"
+            });
+
+            return PartialView("_HealthLink", htLinks);
+        }
+
+        public ActionResult HealthLink2()
+        {
+            List<StudentList> htLinks = new List<StudentList>();
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-mySSP-icon.png",
+                LinkText = "mySSP",
+                LinkHeading = "Download My SSP App from App Store"
+                
+            });
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-call-icon.png",
+                LinkText = "Hot line",
+                LinkHeading = "Call an Advisor fro Help from Canada"
+            });
+
+            return PartialView("_HealthLink", htLinks);
+        }
+
+        
         public ActionResult HealthSupport()
         {
             return View();
         }
+
+        public ActionResult HealthTitle()
+        {
+            List<StudentTitle> htTitles = new List<StudentTitle>();
+
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Field Trips",
+                Route = "/Students/Fieldtrips",
+                Url = "/Assets/Images/students-bus-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Study Assist",
+                Route = "/Students/StudyAssist",
+                Url = "/Assets/Images/students-study-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Health Support",
+                Route = "/Students/HealthSupport",
+                Url = "/Assets/Images/students-health-selected.png",
+                Class = "mt-2 mr-2"
+            });
+
+            return PartialView("_HealthTitle", htTitles);
+        }
+
+        // 以下内容暂时作废
+        private List<StudentTitle> generateHealthTitle()
+        {
+            List<StudentTitle> htTitles = new List<StudentTitle>();
+
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Field Trips",
+                Route = "/Students/Fieldtrips",
+                Url = "/Assets/Images/students-bus-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Study Assist",
+                Route = "/Students/StudyAssist",
+                Url = "/Assets/Images/students-bus-deselected.png",
+                Class = "mt-2 mr-2 student-categories-text"
+            });
+            htTitles.Add(new StudentTitle()
+            {
+                Name = "Health Support",
+                Route = "/Students/HealthSupport",
+                Url = "/Assets/Images/students-bus-selected.png",
+                Class = "mt-2 mr-2"
+            });
+            return htTitles;
+        }
+
+        private List<StudentCard> generateHealthCard1()
+        {
+            List<StudentCard> htCards = new List<StudentCard>();
+
+            htCards.Add(new StudentCard()
+            {
+                RouteName = "https://www.guard.me",
+                ImgUrl = "/Assets/Images/healthSupport/health-guardMe.jpg",
+                IconUrl = "/Assets/Images/healthSupport/health-guardMe-icon.png",
+                AltText = "Guard.Me",
+                Heading = "Guard.me Health Insurance",
+                HeadingFont = "student-study-health-heading",
+                SubTitle = "Protect health of all international students"
+            });
+
+            return htCards;
+        }
+        
+        private List<StudentCard> generateHealthCard2()
+        {
+            List<StudentCard> htCards = new List<StudentCard>();
+
+            htCards.Add(new StudentCard()
+            {
+                RouteName = "https://keepmesafe.myissp.com",
+                ImgUrl = "/Assets/Images/healthSupport/health-mental.jpg",
+                IconUrl = "/Assets/Images/healthSupport/health-mental-icon.png",
+                AltText = "Keep.meSAFE",
+                Heading = "Keep.me Safe Multilingual Support",
+                HeadingFont = "student-study-health-heading",
+                SubTitle = "Help int'l students overcome life challenges"
+            });
+
+            return htCards;
+        }
+
+        
+
+        private List<StudentList> generateHealthLink1()
+        {
+            List<StudentList> htLinks = new List<StudentList>();
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-clinique-icon.png",
+                LinkText = "Clinic",
+                LinkHeading = "Find a Nearby Clinic"
+                
+            });
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-claim-icon.png",
+                LinkText = "Claim",
+                LinkHeading = "Make a Claim After Clinic Visit"
+            });
+
+            return htLinks;
+        }
+
+        private List<StudentList> generateHealthLink2()
+        {
+            List<StudentList> htLinks = new List<StudentList>();
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-mySSP-icon.png",
+                LinkText = "mySSP",
+                LinkHeading = "Download My SSP App from App Store"
+                
+            });
+
+            htLinks.Add(new StudentList()
+            {
+                LinkUrl = "#",
+                LinkIcon = "/Assets/Images/healthSupport/health-call-icon.png",
+                LinkText = "Hot line",
+                LinkHeading = "Call an Advisor fro Help from Canada"
+            });
+
+            return htLinks;
+        }
+
     }
 
 
