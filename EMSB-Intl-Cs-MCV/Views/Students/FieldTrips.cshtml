@@ -11,3 +11,23 @@
 @Html.Partial("_StudentTitle")
 @Html.Partial("_StudentCard")
 
+<div class="container">
+    <div class="d-flex justify-content-around my-3 py-3 border rounded">
+        <div class="row my-1">
+            @foreach (StudentList link in Model.Links)
+            {
+                <div class="col-md-auto ml-4">
+                    <a href="@link.LinkUrl" role="button" class="text-decoration-none student-link-text" target="_blank">
+                        <div class="media my-2">
+                            <img src="@link.LinkIcon" class="students-list-icon" alt="@link.LinkText">
+                            <div class="media-body">
+                                <h5 class="ml-2 mt-3 pt-1">@link.LinkHeading</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

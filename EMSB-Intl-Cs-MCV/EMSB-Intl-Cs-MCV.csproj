@@ -415,6 +415,9 @@
     <Content Include="Views\FieldTrips\QcCity.cshtml" />
     <Content Include="Views\FieldTrips\SugarShack.cshtml" />
     <Content Include="Views\FieldTrips\_IndividualFieldTrip.cshtml" />
+    <Content Include="Views\Students\StudyAssist.cshtml" />
+    <Content Include="Views\Students\_StudyHealthCardRow1.cshtml" />
+    <Content Include="Views\Students\_StudyHealthCardRow2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

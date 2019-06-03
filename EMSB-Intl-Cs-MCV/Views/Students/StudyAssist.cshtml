@@ -1,0 +1,21 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model dynamic
+
+@{
+    ViewBag.Title = "StudyAssist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @Html.Partial("_StudentTitle")
+
+<div class="container">
+    <div class="row my-2">
+        @Html.Partial("_StudyHealthCardRow1")
+        @Html.Partial("_StudyHealthCardRow2")
+    </div>
+</div>
+</div>
+
+
+

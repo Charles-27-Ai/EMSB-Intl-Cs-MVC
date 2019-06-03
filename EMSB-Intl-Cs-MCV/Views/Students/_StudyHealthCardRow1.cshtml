@@ -1,0 +1,45 @@
+﻿@using EMSB_Intl_Cs_MCV.Models
+@model dynamic
+   
+@foreach (StudentCard card in Model.Cards1)
+{
+    <div class="col-md-6 my-1">
+        <div class="card border rounded">
+            <img src="@card.ImgUrl" class="card-img-top img-fluid" width="100%" alt="@card.AltText">
+            <div class="card-body bg-primary">
+                        
+                <div class="media">
+                    <img src="@card.IconUrl" class="students-field-trip-icon" alt="@card.AltText">
+                    <div class="media-body ml-2 mt-1">
+                        <p class="@card.HeadingFont">@card.Heading</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="students-field-trip-location">@card.SubTitle</p>
+                            <a href="#"> @*预留给外部网页链接*@
+                                <img src="/Assets/Images/schools/school-website.png" alt="Map" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="col-md-6 my-1">
+    <div class="d-flex flex-column align-items-start my-1 py-2 pl-3 border rounded">
+        @foreach (StudentList link in Model.Links)
+        {
+            <a href="@link.LinkUrl" role="button" class="text-decoration-none student-link-text" target="_blank">
+                <div class="media my-2">
+                    <img src="@link.LinkIcon" class="students-list-icon" alt="@link.LinkText">
+                    <div class="media-body">
+                        <h5 class="ml-2 mt-3 pt-1">@link.LinkHeading</h5>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
