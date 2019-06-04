@@ -1,0 +1,50 @@
+﻿@using System.Activities.Statements
+@using EMSB_Intl_Cs_MCV.Models
+@model IEnumerable<EMSB_Intl_Cs_MCV.Models.Contact>
+
+
+@if (Model != null)
+{
+    foreach (var adminTech in Model)
+    {
+    
+        <button type="button" class="dropdown-btn btn btn-link text-decoration-none" data-toggle="collapse" href="#@adminTech.collapseName" aria-expanded="False" aria-controls="@adminTech.collapseName">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="media my-2 contact-staff-name">
+                    <img src="@adminTech.Icon" alt="admin technician 1" className="img-fluid" />
+                    <div class="media-body">
+                        <h5 class="contact-staff-namee">@adminTech.Name</h5>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end contact-icon-group">
+                    <img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-1 pb-2" alt="Plus button" />
+                    @*<img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-2 pb-2" alt="Plus button" />
+            <img src="/Assets/Images/schools/plus-btn.png" class="ml-3 mb-2 pb-2" alt="Plus button" />*@
+                </div>
+                </div>
+        </button>
+    
+        
+
+    <div class="collapse" id="@adminTech.collapseName">
+        <div class="d-flex flex-column align-items-start text-left border mb-2 pl-2 pt-2 rounded">
+            <h5 class="border-bottom border-info">Post description</h5>
+            <div class="d-flex flex-wrap mb-2">
+                @adminTech.Post
+            </div>
+            <h5 class="border-bottom border-info">Schools in charge</h5>
+            <div class="d-flex flex-wrap mb-2">
+                @foreach (var school in adminTech.Schools)
+                {
+                    <span>@school</span>
+                }
+            </div>
+            <h5 class="border-bottom border-info">Phone number</h5>
+            <p>@adminTech.Phone</p>
+            <h5 class="border-bottom border-info">Email</h5>
+            <p>@adminTech.Email</p>
+        </div>
+    </div>
+}
+
+}

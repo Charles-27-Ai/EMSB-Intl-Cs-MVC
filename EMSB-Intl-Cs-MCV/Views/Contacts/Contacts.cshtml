@@ -4,16 +4,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Contacts</h2>
 <div class="container text-center">
     @*Leader*@
     @{ Html.RenderAction("Leader", "Contacts"); }
     <div class="row">
-        @*Admin Tech*@
-        
-        
-        @*Advisors*@
-    </div>
-    
+        <div class="col-xs-12 col-lg-5 offset-lg-1">
+            <div class="container my-2 border pb-1 rounded">
+                <div class="d-flex flex-column align-content-between">
+                    <h4 className="border-bottom border-secondary mt-3 pb-1 mx-auto lato-font blue-font bold-font">Administrative Technicians</h4>                    
+                    @{ Html.RenderAction("AdminTechnicians", "Contacts");}
+                </div>                
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-lg-5">
+            <div class="container my-2 border pb-1 rounded">
+                <div class="d-flex flex-column align-content-between">
+                    <h4 className="border-bottom border-secondary mt-3 pb-1 mx-auto lato-font blue-font bold-font">International Students Advisors</h4>
+                    @{ Html.RenderAction("Advisors", "Contacts");}
+                </div>
+            </div>
+        </div>    
 </div>
+    </div>
 

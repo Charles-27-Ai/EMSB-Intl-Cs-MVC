@@ -292,7 +292,7 @@ body {
 }
 
 .contact-icon-group {
-    margin: 1.8rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 
 .contact-icon {
@@ -300,10 +300,16 @@ body {
     margin: 0 .4rem 0 .4rem;
 }
 
-.contact-staff-name {
+/*.contact-staff-name {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-left: 0.6rem !important;
+}*/
+
+.contact-staff-namee {
     text-align: left;
     font-size: 1.3rem;
-    margin: 1.1rem 0 0 .8rem;
+    margin: .8rem 0 0 .8rem;
 }
 
 ul, .ul-school-mission-list {
