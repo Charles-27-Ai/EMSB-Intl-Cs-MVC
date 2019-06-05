@@ -118,7 +118,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
                 ImgUrl = "/assets/images/fieldTrips/sugar-shack.jpg",
                 IconUrl = "/assets/images/fieldTrips/sugar-shack-bg.png",
                 AltText = "Sugar Shack",
-                Heading = "Sugar Shackl",
+                Heading = "Sugar Shack",
                 HeadingFont = "students-card-heading",
                 SubTitle = "Sucrie de la Montagne, Québec"
             });
@@ -171,7 +171,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             htCards.Add(new StudentCard()
             {
-                RouteName = "Rosettastone",
+                RouteName = "https://www.rosettastone.com",
                 ImgUrl = "/Assets/Images/studyAssist/study-rosetta.jpg",
                 IconUrl = "/Assets/Images/studyAssist/study-rosetta-icon.png",
                 AltText = "Rosetta Stone",
@@ -189,7 +189,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             stCards2.Add(new StudentCard()
             {
-                RouteName = "Learnquebec",
+                RouteName = "https://www.learnquebec.ca/home",
                 ImgUrl = "/assets/images/studyAssist/study-learnQc.jpg",
                 IconUrl = "/assets/images/studyAssist/study-learnQc-icon.png",
                 AltText = "LEARN Quebec",
@@ -200,7 +200,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
 
             stCards2.Add(new StudentCard()
             {
-                RouteName = "Vitalenglish",
+                RouteName = "https://vitalenglish.com/",
                 ImgUrl = "/assets/images/studyAssist/study-vitalEn.jpg",
                 IconUrl = "/assets/images/studyAssist/study-vitalEn-icon.png",
                 AltText = "Vital English",
@@ -284,7 +284,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             htCards.Add(new StudentCard()
             {
                 RouteName = "https://keepmesafe.myissp.com",
-                ImgUrl = "/Assets/Images/healthSupport/health-mental.jpg",
+                ImgUrl = "/Assets/Images/healthSupport/health-mental-1.jpg",
                 IconUrl = "/Assets/Images/healthSupport/health-mental-icon.png",
                 AltText = "Keep.meSAFE",
                 Heading = "Keep.me Safe Multilingual Support",
@@ -378,7 +378,7 @@ namespace EMSB_Intl_Cs_MCV.Controllers
             return PartialView("_HealthTitle", htTitles);
         }
 
-        // 以下内容暂时作废
+        // 以下内容暂时作废 The codes below are useless for now.
         private List<StudentTitle> generateHealthTitle()
         {
             List<StudentTitle> htTitles = new List<StudentTitle>();

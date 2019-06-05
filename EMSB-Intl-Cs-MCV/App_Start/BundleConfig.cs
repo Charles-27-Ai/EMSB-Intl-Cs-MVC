@@ -23,8 +23,7 @@ namespace EMSB_Intl_Cs_MCV
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css", 
-                      "~/Content/App.css"));
+                      "~/Content/bootstrap.css"));
         }
     }
 }
